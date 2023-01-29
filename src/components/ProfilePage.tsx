@@ -21,6 +21,8 @@ interface State {
 
 export class ProfilePage extends React.PureComponent<Props, State> {
   private cancellationToken: boolean;
+  // Because here is mock implementation of backend here not used fetch and AbortController for cancellation, but in
+  // the real application it's a better way realization cancellation async requests.
 
   constructor(props: Props) {
     super(props);
